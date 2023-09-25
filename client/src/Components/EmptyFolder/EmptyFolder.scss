@@ -1,0 +1,12 @@
+.emptyFolder {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+
+	& .large-regular {
+		text-align: center;
+		margin: 10px 0 16px;
+		color: var(--text-light);
+	}
+}

@@ -1,0 +1,72 @@
+.sidebar__infor {
+	background-color: var(--white-color);
+	padding: 24px;
+	border-radius: 16px;
+	box-shadow: var(--box-shadow);
+	margin-bottom: 24px;
+
+	&--header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 24px;
+
+		&__img {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+		}
+	}
+
+	&--right {
+		margin-left: 12px;
+	}
+
+	&--name {
+		color: var(--primary-color-dark);
+	}
+
+	&--email {
+		color: var(--text-light);
+	}
+
+	&--edit {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: column;
+		border-bottom: 1px solid var(--text-light);
+
+		&-btn {
+			background: var(--gradient-flashcard);
+			border: none;
+			padding: 4px 12px;
+			margin-bottom: 12px;
+			transition: background-color 0.5s linear;
+
+			& .normal-semibold {
+				color: var(--white-color);
+			}
+
+			&:hover {
+				box-shadow: none;
+				background: var(--gradient-flashcard-hover);
+			}
+		}
+	}
+
+	&--other {
+		& p {
+			color: var(--primary-color-dark);
+			margin: 12px 0;
+
+			& span {
+				color: var(--text-gray);
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

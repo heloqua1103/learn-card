@@ -1,0 +1,28 @@
+.createBlog {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 24px;
+
+	&__img {
+		width: 36px;
+		height: 36px;
+		margin-right: 14px;
+	}
+
+	&__input {
+		color: var(--black-color);
+		border: 1px solid var(--text-gray);
+		padding: 8px 12px;
+		border-radius: 36px;
+		flex: 1;
+
+		&:hover {
+			border-color: var(--primary-color);
+		}
+
+		&:focus {
+			border-color: var(--primary-color);
+		}
+	}
+}

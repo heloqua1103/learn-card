@@ -1,0 +1,174 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		'Roboto', 'Oxygen', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+}
+
+body {
+	user-select: none;
+	// overflow: hidden;
+	height: 100vh;
+	margin: 0 auto;
+}
+
+// common
+:root {
+	--primary-color: #0093e9;
+	--primary-color-light: #80d0c7;
+	--primary-color-lightest: #bdeaff;
+	--primary-color-dark: #1a5296;
+	--primary-color-dark-2: #2980b9;
+	--primary-color-user_profile-bg: #f5fcff;
+	--white-color: #ffffff;
+	--gray-color: #8f9bb3;
+	--gray-color-2: #cbd7ef;
+	--black-color: #222b54;
+	--black-color-2: #4a536d;
+	--yellow-color: #ffc100;
+	--color-main-7: #f5fcff;
+	--color-main-6: #e6f7ff;
+	--color-main-3: #49bdf5;
+	--color-main-4: #a3d9f3;
+	--error-color: #e55635;
+	--success-color: #6ff484;
+	--color-gradient: linear-gradient(
+		175deg,
+		#80d0c7 2%,
+		#47b5d6 26.52%,
+		#0093e9
+	);
+	--gradient-flashcard: linear-gradient(
+		136.02deg,
+		#80d0c7 1.49%,
+		#49b6d6 39.9%,
+		#0093e9 98.76%
+	);
+	--gradient-background: linear-gradient(
+		175deg,
+		#80d0c7 2%,
+		#47b5d6 26.52%,
+		#0093e9
+	);
+	--gradient-flashcard-hover: linear-gradient(
+		190.02deg,
+		#80d0c7 1.49%,
+		#49b6d6 39.9%,
+		#0093e9 98.76%
+	);
+	--color-black-rgb: 34, 43, 84;
+	--text-dark: #3b5162;
+	--text-gray: #889898;
+	--text-gray-1: #8f9bb3;
+	--color-gray-4: #e6edfb;
+	--text-light: #abbbc2;
+	--text-lighter: #e0e6e9;
+	--color-negative: #fa6c6e;
+	--color-negative-light: #f58789;
+	--color-negative-dark: #ff5052;
+	--drop-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+	--box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	--color-black-rgb: 34, 43, 84;
+	--color-contrast: #ffc100;
+	--box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button {
+	border: none;
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		'Roboto', 'Oxygen', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+}
+
+span {
+	font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		'Roboto', 'Oxygen', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+.show {
+	display: block;
+}
+
+.hiden {
+	display: none;
+}
+
+@mixin font($weight, $size, $l_height) {
+	font-weight: $weight;
+	font-size: $size;
+	line-height: $l_height;
+}
+
+h1 {
+	@include font(600, 28px, 140%);
+}
+
+h2 {
+	@include font(600, 20px, 140%);
+}
+
+.large-semibold {
+	@include font(600, 16px, 140%);
+}
+
+.large-medium {
+	@include font(500, 16px, 140%);
+}
+
+.large-regular {
+	@include font(400, 16px, 140%);
+}
+
+.normal-semibold {
+	@include font(600, 14px, 140%);
+}
+
+.normal-medium {
+	@include font(500, 14px, 140%);
+}
+
+.normal-regular {
+	@include font(400, 14px, 140%);
+}
+
+.small-semibold {
+	@include font(600, 12px, 140%);
+}
+
+.small-medium {
+	@include font(500, 12px, 140%);
+}
+
+.small-regular {
+	@include font(400, 12px, 140%);
+}

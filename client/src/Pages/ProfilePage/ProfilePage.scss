@@ -1,0 +1,80 @@
+.profile {
+	position: relative;
+	width: 600px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: var(--box-shadow);
+	padding: 24px 0;
+	border-radius: 14px;
+	background-color: var(--white-color);
+
+	&__background--per {
+		height: 170vh;
+	}
+
+	&__ava {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 24px;
+
+		&--img {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+		}
+
+		&--icon {
+			position: absolute;
+			bottom: 0;
+			right: 40%;
+			padding: 8px 6px;
+			border-radius: 50%;
+			background-color: var(--primary-color);
+			cursor: pointer;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		&--action {
+			border: none;
+
+			& .button_icon {
+				padding: 0;
+			}
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 1px solid var(--text-light);
+
+		&__btn {
+			margin: 14px;
+			cursor: pointer;
+			color: var(--text-gray);
+
+			&:first-child {
+				margin-right: 20px;
+			}
+
+			&:last-child {
+				margin-left: 20px;
+			}
+
+			&:hover {
+				color: var(--primary-color);
+			}
+
+			&--active {
+				color: var(--primary-color);
+			}
+		}
+	}
+}

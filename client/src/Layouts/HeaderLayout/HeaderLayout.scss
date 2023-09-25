@@ -1,0 +1,28 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4px 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 500;
+	background-color: var(--white-color);
+	box-shadow: var(--box-shadow);
+
+	&__title {
+		font-size: 48px;
+		background: #0093e9;
+		background: var(--gradient-background);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		font-weight: 700;
+	}
+
+	&--right {
+		width: 200px;
+		margin-right: 16px;
+	}
+}

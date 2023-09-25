@@ -1,0 +1,25 @@
+.background-home {
+	background: linear-gradient(
+		124deg,
+		var(--primary-color-light),
+		var(--primary-color)
+	);
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+	position: relative;
+	height: unset !important;
+}
+
+.list {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 20px;
+	padding: 0 112px;
+	height: 590px;
+}

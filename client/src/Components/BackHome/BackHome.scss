@@ -1,0 +1,33 @@
+.back__home {
+	padding-top: 30px;
+	margin: 0 30px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	color: var(--white-color);
+
+	& .large-semibold {
+		padding-left: 12px;
+		color: inherit;
+	}
+
+	& svg {
+		cursor: pointer;
+		& path {
+			fill: var(--white-color);
+		}
+	}
+
+	&:hover svg {
+		animation: transitionArrow 0.7s linear infinite alternate;
+	}
+}
+
+@keyframes transitionArrow {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translate(-10px);
+	}
+}

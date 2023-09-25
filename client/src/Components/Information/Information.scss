@@ -1,0 +1,87 @@
+.inforItem {
+	position: relative;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+
+		&--img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+
+		&--name {
+			color: var(--color-black);
+		}
+
+		&--icon {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__dropdown {
+		display: none;
+		position: absolute;
+		background-color: var(--white-color);
+		border-radius: 6px;
+		box-shadow: var(--box-shadow);
+		width: 100%;
+		top: 60px;
+
+		&::after {
+			display: block;
+			position: absolute;
+			content: '';
+			top: -12px;
+			left: 0;
+			width: 100%;
+			height: 20px;
+		}
+
+		& li {
+			padding: 8px;
+
+			&:hover {
+				background-color: var(--text-lighter);
+
+				& .normal-regular {
+					color: var(--primary-color);
+				}
+			}
+
+			&:first-child:hover,
+			&:nth-child(2):hover {
+				background-color: var(--white-color);
+			}
+
+			&:last-child:hover {
+				border-bottom-left-radius: 6px;
+				border-bottom-right-radius: 6px;
+
+				& .normal-regular {
+					color: var(--error-color);
+				}
+			}
+		}
+
+		& .small-medium {
+			color: var(--text-dark);
+		}
+
+		& .large-semibold {
+			color: var(--primary-color);
+		}
+
+		& .normal-regular {
+			color: var(--text-dark);
+		}
+	}
+
+	&:hover &__dropdown {
+		display: block;
+	}
+}

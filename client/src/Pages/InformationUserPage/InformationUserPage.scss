@@ -1,0 +1,37 @@
+.infor {
+	padding: 75px 70px 0;
+	background-color: var(--primary-color-user_profile-bg);
+
+	&__back {
+		color: var(--primary-color);
+		margin-left: 0;
+
+		& svg path {
+			fill: var(--primary-color);
+		}
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: 30rem auto;
+		grid-column-gap: 2.4rem;
+		grid-row-gap: 3.2rem;
+		row-gap: 3.2rem;
+		column-gap: 2.4rem;
+	}
+
+	&__sidebar {
+		&--bottom {
+			background-color: var(--white-color);
+			padding: 24px;
+			border-radius: 16px;
+			box-shadow: var(--box-shadow);
+			margin-bottom: 24px;
+
+			&-title {
+				text-align: center;
+				color: var(--primary-color-dark);
+			}
+		}
+	}
+}

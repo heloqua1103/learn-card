@@ -1,0 +1,73 @@
+.personalInfor {
+	&__form {
+		padding: 32px 40px 30px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 24px;
+	}
+
+	&__left,
+	&__right {
+		width: calc(100% / 2);
+	}
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+
+		&--label {
+			color: var(--text-gray);
+			margin-bottom: 12px;
+		}
+
+		&--input {
+			padding: 12px;
+			border: 1px solid var(--text-light);
+			border-radius: 14px;
+			margin-bottom: 24px;
+			width: 100%;
+			transition: border-color 0.9s ease-in;
+
+			&:focus {
+				border-color: var(--primary-color);
+			}
+
+			&::placeholder {
+				color: var(--text-light);
+			}
+
+			&[type='number'] {
+				&::-webkit-outer-spin-button,
+				&::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+			}
+		}
+
+		&--select {
+			@extend .personalInfor__field--input;
+		}
+
+		&--textarea {
+			resize: none;
+			outline: none;
+			@extend .personalInfor__field--input;
+		}
+	}
+
+	&__submit {
+		border: none;
+		color: var(--white-color);
+		background: var(--color-gradient);
+		padding: 2px 20px;
+		margin: auto;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}

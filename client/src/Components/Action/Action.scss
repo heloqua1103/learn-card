@@ -1,0 +1,58 @@
+.action {
+    position: fixed;
+    margin-right: 30px;
+    top: 40vh;
+    right: 0;
+
+    & .button {
+        margin: 15px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: var(--white-color);
+        box-shadow: 0 6px 20px rgba(var(--color-black-rgb),.1);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        color: var(--color-main);
+        font-size: 2.5rem;
+        transition: all .2s;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        & .button_icon svg {
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        &.disabled {
+            cursor: not-allowed;
+            background-color: rgba(255, 255, 255, .6);
+            pointer-events: none;
+        }
+    }
+
+    &--practice::after, &--delete::after, &--folder::after {
+        position: absolute;
+        content: attr(value);
+        padding: 0 2px;
+        width: -webkit-max-content;
+        width: max-content;
+        min-width: 18px;
+        min-height: 18px;
+        background-color: var(--color-contrast);
+        border-radius: 50%;
+        bottom: -2px;
+        right: -6px;
+        color: var(--primary-color);
+        opacity: .9;
+        font-size: 14px;
+        text-align: center;
+        line-height: 24px;
+    }
+}
